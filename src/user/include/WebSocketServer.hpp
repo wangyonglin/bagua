@@ -1,0 +1,4 @@
+#if !defined(WEBSOCKETSERVER_HPP)
+#define WEBSOCKETSERVER_HPP
+
+#endif

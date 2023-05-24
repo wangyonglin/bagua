@@ -1,2 +1,1 @@
-# tiktok_websockets
-
+ libtoolize --automake --copy --debug --force

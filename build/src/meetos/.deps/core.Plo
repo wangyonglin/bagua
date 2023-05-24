@@ -1,0 +1,3 @@
+core.lo: ../../../src/meetos/src/core.cpp /usr/include/stdc-predef.h
+
+/usr/include/stdc-predef.h:
