@@ -1,5 +1,5 @@
 SUBDIRS = \
-    src/meetos/ \
+    src/taoism/ \
     src/user/
 
 bindir=     $(prefix)/bin

@@ -69,10 +69,10 @@ am__make_running_with_option = \
   test $$has_opt = yes
 am__make_dryrun = (target_option=n; $(am__make_running_with_option))
 am__make_keepgoing = (target_option=k; $(am__make_running_with_option))
-pkgdatadir = $(datadir)/meetos
-pkgincludedir = $(includedir)/meetos
-pkglibdir = $(libdir)/meetos
-pkglibexecdir = $(libexecdir)/meetos
+pkgdatadir = $(datadir)/eight-trigrambrazier
+pkgincludedir = $(includedir)/eight-trigrambrazier
+pkglibdir = $(libdir)/eight-trigrambrazier
+pkglibexecdir = $(libexecdir)/eight-trigrambrazier
 am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd
 install_sh_DATA = $(install_sh) -c -m 644
 install_sh_PROGRAM = $(install_sh) -c
@@ -158,8 +158,8 @@ CTAGS = ctags
 CSCOPE = cscope
 DIST_SUBDIRS = $(SUBDIRS)
 am__DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/config.h.in AUTHORS \
-	COPYING ChangeLog INSTALL NEWS README compile config.guess \
-	config.sub depcomp install-sh ltmain.sh missing
+	COPYING ChangeLog INSTALL NEWS README ar-lib compile \
+	config.guess config.sub depcomp install-sh ltmain.sh missing
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 distdir = $(PACKAGE)-$(VERSION)
 top_distdir = $(distdir)
@@ -202,13 +202,13 @@ distuninstallcheck_listfiles = find . -type f -print
 am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = ${SHELL} /github/tiktok_websockets/missing aclocal-1.16
+ACLOCAL = ${SHELL} /home/wangyonglin/github/wangyonglin/eight-trigrambrazier/missing aclocal-1.16
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
 AR = ar
-AUTOCONF = ${SHELL} /github/tiktok_websockets/missing autoconf
-AUTOHEADER = ${SHELL} /github/tiktok_websockets/missing autoheader
-AUTOMAKE = ${SHELL} /github/tiktok_websockets/missing automake-1.16
+AUTOCONF = ${SHELL} /home/wangyonglin/github/wangyonglin/eight-trigrambrazier/missing autoconf
+AUTOHEADER = ${SHELL} /home/wangyonglin/github/wangyonglin/eight-trigrambrazier/missing autoheader
+AUTOMAKE = ${SHELL} /home/wangyonglin/github/wangyonglin/eight-trigrambrazier/missing automake-1.16
 AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
@@ -246,7 +246,7 @@ LIPO =
 LN_S = ln -s
 LTLIBOBJS = 
 LT_SYS_LIBRARY_PATH = 
-MAKEINFO = ${SHELL} /github/tiktok_websockets/missing makeinfo
+MAKEINFO = ${SHELL} /home/wangyonglin/github/wangyonglin/eight-trigrambrazier/missing makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /usr/bin/mkdir -p
 NM = /usr/bin/nm -B
@@ -255,24 +255,24 @@ OBJDUMP = objdump
 OBJEXT = o
 OTOOL = 
 OTOOL64 = 
-PACKAGE = meetos
+PACKAGE = eight-trigrambrazier
 PACKAGE_BUGREPORT = admin@wangyonglin.com
-PACKAGE_NAME = meetos
-PACKAGE_STRING = meetos 1.3.4
-PACKAGE_TARNAME = meetos
+PACKAGE_NAME = eight-trigrambrazier
+PACKAGE_STRING = eight-trigrambrazier 1.3.5
+PACKAGE_TARNAME = eight-trigrambrazier
 PACKAGE_URL = 
-PACKAGE_VERSION = 1.3.4
+PACKAGE_VERSION = 1.3.5
 PATH_SEPARATOR = :
 RANLIB = ranlib
 SED = /usr/bin/sed
 SET_MAKE = 
-SHELL = /bin/sh
+SHELL = /bin/bash
 STRIP = strip
-VERSION = 1.3.4
-abs_builddir = /github/tiktok_websockets/build
-abs_srcdir = /github/tiktok_websockets/build/..
-abs_top_builddir = /github/tiktok_websockets/build
-abs_top_srcdir = /github/tiktok_websockets/build/..
+VERSION = 1.3.5
+abs_builddir = /home/wangyonglin/github/wangyonglin/eight-trigrambrazier/build
+abs_srcdir = /home/wangyonglin/github/wangyonglin/eight-trigrambrazier/build/..
+abs_top_builddir = /home/wangyonglin/github/wangyonglin/eight-trigrambrazier/build
+abs_top_srcdir = /home/wangyonglin/github/wangyonglin/eight-trigrambrazier/build/..
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -302,7 +302,7 @@ host_vendor = pc
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /github/tiktok_websockets/install-sh
+install_sh = ${SHELL} /home/wangyonglin/github/wangyonglin/eight-trigrambrazier/install-sh
 libdir = $(prefix)/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -311,9 +311,10 @@ mandir = ${datarootdir}/man
 mkdir_p = $(MKDIR_P)
 oldincludedir = /usr/include
 pdfdir = ${docdir}
-prefix = /usr/local/meet
+prefix = /usr/local
 program_transform_name = s,x,x,
 psdir = ${docdir}
+runstatedir = ${localstatedir}/run
 sbindir = ${exec_prefix}/sbin
 sharedstatedir = ${prefix}/com
 srcdir = ..
@@ -323,7 +324,7 @@ top_build_prefix =
 top_builddir = .
 top_srcdir = ..
 SUBDIRS = \
-    src/meetos/ \
+    src/taoism/ \
     src/user/
 
 all: config.h

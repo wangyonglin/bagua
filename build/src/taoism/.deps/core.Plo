@@ -1,0 +1,2 @@
+core.lo: ../../../src/taoism/src/core.cpp /usr/include/stdc-predef.h
+/usr/include/stdc-predef.h:

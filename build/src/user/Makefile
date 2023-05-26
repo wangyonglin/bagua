@@ -70,10 +70,10 @@ am__make_running_with_option = \
   test $$has_opt = yes
 am__make_dryrun = (target_option=n; $(am__make_running_with_option))
 am__make_keepgoing = (target_option=k; $(am__make_running_with_option))
-pkgdatadir = $(datadir)/meetos
-pkgincludedir = $(includedir)/meetos
-pkglibdir = $(libdir)/meetos
-pkglibexecdir = $(libexecdir)/meetos
+pkgdatadir = $(datadir)/eight-trigrambrazier
+pkgincludedir = $(includedir)/eight-trigrambrazier
+pkglibdir = $(libdir)/eight-trigrambrazier
+pkglibexecdir = $(libexecdir)/eight-trigrambrazier
 am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd
 install_sh_DATA = $(install_sh) -c -m 644
 install_sh_PROGRAM = $(install_sh) -c
@@ -88,7 +88,7 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = x86_64-pc-linux-gnu
 host_triplet = x86_64-pc-linux-gnu
-sbin_PROGRAMS = meet$(EXEEXT)
+sbin_PROGRAMS = eightTrigrams$(EXEEXT)
 subdir = src/user
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/configure.ac
@@ -101,9 +101,9 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(sbindir)"
 PROGRAMS = $(sbin_PROGRAMS)
-am_meet_OBJECTS = main.$(OBJEXT)
-meet_OBJECTS = $(am_meet_OBJECTS)
-meet_DEPENDENCIES = $(top_builddir)/src/meetos/libmeetos.la
+am_eightTrigrams_OBJECTS = main.$(OBJEXT)
+eightTrigrams_OBJECTS = $(am_eightTrigrams_OBJECTS)
+eightTrigrams_DEPENDENCIES = $(top_builddir)/src/taoism/libtaoism.la
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
 am__v_lt_0 = --silent
@@ -143,8 +143,8 @@ AM_V_CXXLD = $(am__v_CXXLD_$(V))
 am__v_CXXLD_ = $(am__v_CXXLD_$(AM_DEFAULT_VERBOSITY))
 am__v_CXXLD_0 = @echo "  CXXLD   " $@;
 am__v_CXXLD_1 = 
-SOURCES = $(meet_SOURCES)
-DIST_SOURCES = $(meet_SOURCES)
+SOURCES = $(eightTrigrams_SOURCES)
+DIST_SOURCES = $(eightTrigrams_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -171,13 +171,13 @@ ETAGS = etags
 CTAGS = ctags
 am__DIST_COMMON = $(srcdir)/Makefile.in $(top_srcdir)/depcomp
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /github/tiktok_websockets/missing aclocal-1.16
+ACLOCAL = ${SHELL} /home/wangyonglin/github/wangyonglin/eight-trigrambrazier/missing aclocal-1.16
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
 AR = ar
-AUTOCONF = ${SHELL} /github/tiktok_websockets/missing autoconf
-AUTOHEADER = ${SHELL} /github/tiktok_websockets/missing autoheader
-AUTOMAKE = ${SHELL} /github/tiktok_websockets/missing automake-1.16
+AUTOCONF = ${SHELL} /home/wangyonglin/github/wangyonglin/eight-trigrambrazier/missing autoconf
+AUTOHEADER = ${SHELL} /home/wangyonglin/github/wangyonglin/eight-trigrambrazier/missing autoheader
+AUTOMAKE = ${SHELL} /home/wangyonglin/github/wangyonglin/eight-trigrambrazier/missing automake-1.16
 AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
@@ -210,14 +210,16 @@ LD = /usr/bin/ld -m elf_x86_64
 LDFLAGS = 
 LIBOBJS = 
 #需要引用的动态库文件
+#   sudo apt-get install openssl libssl-dev
+#   sudo apt-get install automake make libevent-dev openssl-devel
 LIBS =  -g -O2 -Wall -pedantic -lm -levent -lssl -lcrypto \
-	-lpthread -levent_openssl -lcurl
+	-lpthread -levent_openssl
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIPO = 
 LN_S = ln -s
 LTLIBOBJS = 
 LT_SYS_LIBRARY_PATH = 
-MAKEINFO = ${SHELL} /github/tiktok_websockets/missing makeinfo
+MAKEINFO = ${SHELL} /home/wangyonglin/github/wangyonglin/eight-trigrambrazier/missing makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /usr/bin/mkdir -p
 NM = /usr/bin/nm -B
@@ -226,24 +228,24 @@ OBJDUMP = objdump
 OBJEXT = o
 OTOOL = 
 OTOOL64 = 
-PACKAGE = meetos
+PACKAGE = eight-trigrambrazier
 PACKAGE_BUGREPORT = admin@wangyonglin.com
-PACKAGE_NAME = meetos
-PACKAGE_STRING = meetos 1.3.4
-PACKAGE_TARNAME = meetos
+PACKAGE_NAME = eight-trigrambrazier
+PACKAGE_STRING = eight-trigrambrazier 1.3.5
+PACKAGE_TARNAME = eight-trigrambrazier
 PACKAGE_URL = 
-PACKAGE_VERSION = 1.3.4
+PACKAGE_VERSION = 1.3.5
 PATH_SEPARATOR = :
 RANLIB = ranlib
 SED = /usr/bin/sed
 SET_MAKE = 
-SHELL = /bin/sh
+SHELL = /bin/bash
 STRIP = strip
-VERSION = 1.3.4
-abs_builddir = /github/tiktok_websockets/build/src/user
-abs_srcdir = /github/tiktok_websockets/build/../src/user
-abs_top_builddir = /github/tiktok_websockets/build
-abs_top_srcdir = /github/tiktok_websockets/build/..
+VERSION = 1.3.5
+abs_builddir = /home/wangyonglin/github/wangyonglin/eight-trigrambrazier/build/src/user
+abs_srcdir = /home/wangyonglin/github/wangyonglin/eight-trigrambrazier/build/../src/user
+abs_top_builddir = /home/wangyonglin/github/wangyonglin/eight-trigrambrazier/build
+abs_top_srcdir = /home/wangyonglin/github/wangyonglin/eight-trigrambrazier/build/..
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -273,7 +275,7 @@ host_vendor = pc
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /github/tiktok_websockets/install-sh
+install_sh = ${SHELL} /home/wangyonglin/github/wangyonglin/eight-trigrambrazier/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -282,9 +284,10 @@ mandir = ${datarootdir}/man
 mkdir_p = $(MKDIR_P)
 oldincludedir = /usr/include
 pdfdir = ${docdir}
-prefix = /usr/local/meet
+prefix = /usr/local
 program_transform_name = s,x,x,
 psdir = ${docdir}
+runstatedir = ${localstatedir}/run
 sbindir = ${exec_prefix}/sbin
 sharedstatedir = ${prefix}/com
 srcdir = ../../../src/user
@@ -298,11 +301,11 @@ AUTOMAKE_OPTIONS = foreign
 AM_CPPFLAGS = \
     -I $(top_srcdir)/src/user/include/
 
-meet_SOURCES = \
+eightTrigrams_SOURCES = \
      $(top_srcdir)/src/user/src/main.cpp
 
-meet_LDADD = \
-    $(top_builddir)/src/meetos/libmeetos.la \
+eightTrigrams_LDADD = \
+    $(top_builddir)/src/taoism/libtaoism.la \
     $(FLIBS) 
 
 EXTRA_DIST = $(top_srcdir)/src/user/include/*
@@ -389,9 +392,9 @@ clean-sbinPROGRAMS:
 	echo " rm -f" $$list; \
 	rm -f $$list
 
-meet$(EXEEXT): $(meet_OBJECTS) $(meet_DEPENDENCIES) $(EXTRA_meet_DEPENDENCIES) 
-	@rm -f meet$(EXEEXT)
-	$(AM_V_CXXLD)$(CXXLINK) $(meet_OBJECTS) $(meet_LDADD) $(LIBS)
+eightTrigrams$(EXEEXT): $(eightTrigrams_OBJECTS) $(eightTrigrams_DEPENDENCIES) $(EXTRA_eightTrigrams_DEPENDENCIES) 
+	@rm -f eightTrigrams$(EXEEXT)
+	$(AM_V_CXXLD)$(CXXLINK) $(eightTrigrams_OBJECTS) $(eightTrigrams_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)

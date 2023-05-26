@@ -88,7 +88,7 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
-sbin_PROGRAMS = meet$(EXEEXT)
+sbin_PROGRAMS = eightTrigrams$(EXEEXT)
 subdir = src/user
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/configure.ac
@@ -101,9 +101,9 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(sbindir)"
 PROGRAMS = $(sbin_PROGRAMS)
-am_meet_OBJECTS = main.$(OBJEXT)
-meet_OBJECTS = $(am_meet_OBJECTS)
-meet_DEPENDENCIES = $(top_builddir)/src/meetos/libmeetos.la
+am_eightTrigrams_OBJECTS = main.$(OBJEXT)
+eightTrigrams_OBJECTS = $(am_eightTrigrams_OBJECTS)
+eightTrigrams_DEPENDENCIES = $(top_builddir)/src/taoism/libtaoism.la
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
 am__v_lt_0 = --silent
@@ -143,8 +143,8 @@ AM_V_CXXLD = $(am__v_CXXLD_@AM_V@)
 am__v_CXXLD_ = $(am__v_CXXLD_@AM_DEFAULT_V@)
 am__v_CXXLD_0 = @echo "  CXXLD   " $@;
 am__v_CXXLD_1 = 
-SOURCES = $(meet_SOURCES)
-DIST_SOURCES = $(meet_SOURCES)
+SOURCES = $(eightTrigrams_SOURCES)
+DIST_SOURCES = $(eightTrigrams_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -210,8 +210,10 @@ LD = @LD@
 LDFLAGS = @LDFLAGS@
 LIBOBJS = @LIBOBJS@
 #需要引用的动态库文件
+#   sudo apt-get install openssl libssl-dev
+#   sudo apt-get install automake make libevent-dev openssl-devel
 LIBS = @LIBS@ -g -O2 -Wall -pedantic -lm -levent -lssl -lcrypto \
-	-lpthread -levent_openssl -lcurl
+	-lpthread -levent_openssl
 LIBTOOL = @LIBTOOL@
 LIPO = @LIPO@
 LN_S = @LN_S@
@@ -285,6 +287,7 @@ pdfdir = @pdfdir@
 prefix = @prefix@
 program_transform_name = @program_transform_name@
 psdir = @psdir@
+runstatedir = @runstatedir@
 sbindir = @sbindir@
 sharedstatedir = @sharedstatedir@
 srcdir = @srcdir@
@@ -298,11 +301,11 @@ AUTOMAKE_OPTIONS = foreign
 AM_CPPFLAGS = \
     -I $(top_srcdir)/src/user/include/
 
-meet_SOURCES = \
+eightTrigrams_SOURCES = \
      $(top_srcdir)/src/user/src/main.cpp
 
-meet_LDADD = \
-    $(top_builddir)/src/meetos/libmeetos.la \
+eightTrigrams_LDADD = \
+    $(top_builddir)/src/taoism/libtaoism.la \
     $(FLIBS) 
 
 EXTRA_DIST = $(top_srcdir)/src/user/include/*
@@ -389,9 +392,9 @@ clean-sbinPROGRAMS:
 	echo " rm -f" $$list; \
 	rm -f $$list
 
-meet$(EXEEXT): $(meet_OBJECTS) $(meet_DEPENDENCIES) $(EXTRA_meet_DEPENDENCIES) 
-	@rm -f meet$(EXEEXT)
-	$(AM_V_CXXLD)$(CXXLINK) $(meet_OBJECTS) $(meet_LDADD) $(LIBS)
+eightTrigrams$(EXEEXT): $(eightTrigrams_OBJECTS) $(eightTrigrams_DEPENDENCIES) $(EXTRA_eightTrigrams_DEPENDENCIES) 
+	@rm -f eightTrigrams$(EXEEXT)
+	$(AM_V_CXXLD)$(CXXLINK) $(eightTrigrams_OBJECTS) $(eightTrigrams_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
